@@ -12,7 +12,7 @@
     <div class="item-details">
       <h2 id="item-name">Item Name</h2>
       <p>Price: ₹<span id="item-price">0</span></p>
-      <p>Pay via PhonePe to: <strong>9110337046</strong></p>
+      <p>Pay via PhonePe to: <strong>9110337046@axl</strong></p>
     </div>
     <a id="pay-btn" class="phonepe-btn" href="https://www.phonepe.com/" target="_blank" rel="noopener">Pay with PhonePe</a>
   </div>
@@ -23,7 +23,8 @@
       document.getElementById("item-name").textContent = item.name;
       document.getElementById("item-price").textContent = item.price;
 
-      const upiLink = `upi://pay?pa=9110337046@upi&pn=VT%20Creations&tn=${encodeURIComponent(item.name)}&am=${item.price}&cu=INR`;
+      // UPI link with correct @axl ID
+      const upiLink = `upi://pay?pa=9110337046@axl&pn=VT%20Creations&tn=${encodeURIComponent(item.name)}&am=${item.price}&cu=INR`;
       document.getElementById("pay-btn").href = upiLink;
     } else {
       document.getElementById("item-name").textContent = "No item selected";
